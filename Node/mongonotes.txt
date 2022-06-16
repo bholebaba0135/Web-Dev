@@ -1,0 +1,53 @@
+to start - mongo
+cls to clear screen
+To view available databases - show dbs
+   by default: admin,config,local are available
+To create and use a database/ to use an already existing database: use database_name
+Now, when I click on show dbs, the newly created database wont appear, coz no collections with any record has been inserted yet, which is a minimum requirement
+records=documents,columns=fields
+database->collection(Tables)->records(rows/documents)
+To create a collection and insert one record: db.collection_name.insertOne({name:"ReactJS",type:"Front End",videos:80,active:true})
+automatically objectid(primary key) is created
+
+it uses BSON values, binary json
+To view, the collection inside a database, show collections
+to view the records in a collection, db.collection_name.find().pretty()
+to exit, ctrl+c or quit()
+follows camel case
+to insert multiple documents in a collection, we use, db.collection_name.insertMany([ {document1/row}, {document2/row},{document3/row}]) ->array of objects
+To read,
+db.collection_name.find(query,projection)
+ - Find all the results in a given collection
+ - show the result in a pretty format
+     db.collectionname.find().pretty()
+ - get only MongoDB data as output
+     db.collectionname.find({attribute_name:"value"}).pretty()
+ - get only MongoDB data as output with a name field
+     db.collectionname.find({attribute_name:"value"},{name:1}).pretty()
+     name:0 will fetch all attributes except name, id will be displayed by deafult
+ - get the MongoDB data without -ID field in it
+     db.collectionname.find({name:"value",{_id:0,name:1}).pretty()
+ - set filter attribute:certain value and fetch only the first document which satifies that filter
+     db.collection_name.find({name:"value"}).pretty().limit(1)
+ - Do the same as last thing but using different method
+   db.collection_name.findOne({name:"value"})
+ - show the second document matching the category
+   db.colection_name.find({name:"value"}).pretty().limit(1).skip(1)
+UPDATE
+ - db.collection_name.updateOne(<filter>,<update>) -->updateone
+ - db.collection_name.updateMany(<filter>,<update>)  -->update many
+ - db.collection_name.updateOne({name:"value"},{$set:{type(the attribute whose vallue needs to be changed):"new value"}})
+ - change all the fields where name= frontend and set status as false
+    db.collection_name.updateMany({name="frontend"},{$set:{status:false}})
+DELETE
+db.collection_name.deleteMany(deletion_criteria)
+ - delete the field with the type matches "full stack"
+ db.collectionname.deleteMany({type:"Full Stack"})
+ -remove all the documents
+  db.collection_name.deleteMany({})
+
+select * from emp_info
+where emp_dept=( select dept_id from dept where dept_name = "Production");
+  
+
+db.collection_name.drop()

@@ -1,0 +1,127 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,600,700,800';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ 
+.header {
+    width:100%;
+    height:100px;
+    background-color:rgb(56,107,140) ;
+    }
+
+.lheader{
+    float:left;
+    width:10%;
+    height:60px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+
+}
+.rheader{
+    float:right;
+    width:87%;
+}
+.rheader ul li{
+    display:inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+	font-size: 25px;
+    line-height: 100px;
+	margin-left: 25px;
+}
+.navbar {
+    overflow: hidden;
+    background-color:rgb(245,255,208);
+    font-family: 'Montserrat', sans-serif;
+    height:70px;
+    
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 12px;
+  }
+  .navbar a:hover{
+    background-color: rgb(84,91,98);
+  }
+
+  body {
+    background-color: #fff;
+    font-family: Ubuntu, 'Open Sans', sans-serif;
+  }
+  
+  #hero-section{
+    background: url("https://i.ibb.co/pb8wf1k/peit-school.jpg") scroll no-repeat center;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+  }
+  #dark{
+    background-color: rgba(0,0,0,0.45);
+    height: 100%;
+    width: 100%;
+    padding: auto;
+  }
+  #dark #container{
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    max-width: 1000px;
+    margin: auto auto ;
+    padding: 6rem 5rem;
+    font-variant: small-caps;
+  }
+  @media (max-width: 650px){
+    #dark > #container{
+      font-size: 1.5rem;
+      padding: 2rem;
+    }
+  }
+  section.container h1{
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    padding: 25px 0;
+    color: rgb(12,12,50);
+  }
+  
+  #projects:not[h1]{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  #projects > iframe{
+    display: block;
+    margin: auto;
+    max-width: 560px;
+    width: 70%;
+  }
+  #projects p{
+    text-align: center;
+    font-style: italic;
+  }
+  #form input[type='email'] {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #form input[type='submit'] {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border: 0;
+    background-color: rgb(12,12,50);
+    color: #fff;
+    padding: 10px;
+  }

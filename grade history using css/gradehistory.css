@@ -1,0 +1,13 @@
+.tableone{
+    border:solid 1px; 
+    border-collapse:collapse;
+    width:100%;
+    text-align: center;
+}
+.tableone .rowone{
+    color:white;
+    background-color: rgb(87, 164, 226);
+}
+.list{
+    color:red;
+}
